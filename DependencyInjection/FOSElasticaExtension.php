@@ -496,6 +496,9 @@ class FOSElasticaExtension extends Extension
             case 'mongodb':
                 $eventsClass = '\Doctrine\ODM\MongoDB\Events';
                 break;
+            case 'phpcr':
+                $eventsClass = '\Doctrine\ODM\PHPCR\Event';
+                break;
             default:
                 throw new InvalidArgumentException(sprintf('Cannot determine events for driver "%s"', $typeConfig['driver']));
                 break;
